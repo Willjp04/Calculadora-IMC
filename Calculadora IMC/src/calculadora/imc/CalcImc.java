@@ -10,6 +10,11 @@ package calculadora.imc;
  * @author PORTOMASTER
  */
 public class CalcImc extends javax.swing.JFrame {
+    
+    float peso;
+    float altura;
+    float imc;
+    
   
 
     /**
@@ -28,7 +33,6 @@ public class CalcImc extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTextField4 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
         jlaPeso = new javax.swing.JLabel();
         jlaAltura = new javax.swing.JLabel();
@@ -38,8 +42,6 @@ public class CalcImc extends javax.swing.JFrame {
         jtfImc = new javax.swing.JTextField();
         jbuCalcular = new javax.swing.JButton();
         jbuLimpar = new javax.swing.JButton();
-
-        jTextField4.setText("jTextField4");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,6 +68,11 @@ public class CalcImc extends javax.swing.JFrame {
         jbuCalcular.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         jbuCalcular.setForeground(new java.awt.Color(0, 153, 255));
         jbuCalcular.setText("Calcular");
+        jbuCalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbuCalcularActionPerformed(evt);
+            }
+        });
 
         jbuLimpar.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         jbuLimpar.setForeground(new java.awt.Color(0, 153, 255));
@@ -92,13 +99,12 @@ public class CalcImc extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jlaImc)
                                 .addGap(20, 20, 20)
-                                .addComponent(jtfImc)
-                                .addGap(232, 232, 232))
+                                .addComponent(jtfImc, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jbuCalcular)
-                                .addGap(50, 50, 50)
+                                .addGap(33, 33, 33)
                                 .addComponent(jbuLimpar)))
-                        .addContainerGap())))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,6 +146,10 @@ public class CalcImc extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfPesoActionPerformed
 
+    private void jbuCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuCalcularActionPerformed
+        
+    }//GEN-LAST:event_jbuCalcularActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -177,7 +187,6 @@ public class CalcImc extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField4;
     private javax.swing.JButton jbuCalcular;
     private javax.swing.JButton jbuLimpar;
     private javax.swing.JLabel jlaAltura;
