@@ -147,7 +147,11 @@ public class CalcImc extends javax.swing.JFrame {
     }//GEN-LAST:event_jtfPesoActionPerformed
 
     private void jbuCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbuCalcularActionPerformed
-        
+altura = Float.valueOf(jlaAltura.getText());
+peso = Float.valueOf(jlaPeso.getText());
+imc = peso/(altura*altura);
+jtfImc.setText(String.valueOf(imc));
+
     }//GEN-LAST:event_jbuCalcularActionPerformed
 
     /**
